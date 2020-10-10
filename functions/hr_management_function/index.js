@@ -23,10 +23,10 @@ app.use(formidable({}, [{
     },
     {
         event: 'error',
-        action: function(req) {
-            req.resume();
+        action: function(req, res, next) {
+            next();
         }
-    }
+    },
 ]));
 
 app.post('/admin', (req, res) => {
