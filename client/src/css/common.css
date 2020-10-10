@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial;
+    background-color: #1d1c1c;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background-color: none;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.loadOverlay {
+    background-color: #032f3e;
+    opacity: 0.95;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    transition: 0.1s linear;
+    visibility: visible !important;
+    background-color: black !important;
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    /* Black w/ opacity */
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    border: 10px solid #595f6e;
+    border-radius: 50%;
+    border-top: 10px solid #acdfdf!important;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+.loader2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    border: 10px solid #595f6e;
+    border-radius: 50%;
+    border-top: 10px solid #acdfdf!important;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+.blurLoader {
+    background-color: whitesmoke;
+    opacity: 0.8;
+    filter: blur(3px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    transition: 0.1s linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.info {
+    position: relative;
+}
+
+.info-style {
+    position: absolute;
+    top: 20px;
+    left: 35%;
+    z-index: 9;
+    color: #032f3e;
+    margin: 10% auto;
+    width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    margin: 30px auto !important;
+}
+
+.modal {
+    background-color: #032f3e;
+    opacity: 0.95;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    transition: 0.1s linear;
+    background-color: black !important;
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    visibility: hidden;
+    /* Black w/ opacity */
+}
+
+.model-content {
+    position: relative;
+    top: -100px;
+    z-index: 9;
+    color: #032f3e;
+    margin: 10% auto;
+    width: 50%;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #f3ecec;
+    box-shadow: inset 1px 1px 0.5px 0.5px #a8a7a7, inset -1px -1px 0.5px 0.5px #a8a7a7;
+}
+
+.model-close {
+    color: #032f3e;
+    font-size: 32px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.model-close:hover {
+    color: #a2dfdf;
+}
+
+.success {
+    background-color: #e8fce8;
+    border: 1px solid #589958;
+    box-shadow: inset 1px 1px 1px 2px #589958, inset -1px -1px 1px 2px #589958, inset 1px 1px 1px 2px #589958, inset -1px -1px 1px 2px #589958;
+}
+
+.success h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #589958;
+}
+
+.success h4 .term {
+    font-size: 22px;
+    font-weight: 900;
+    color: #589958;
+}
+
+.failure {
+    background-color: #ffe8e8;
+    border: 1px solid #ff6060;
+    box-shadow: inset 1px 1px 1px 2px #ff6060, inset -1px -1px 1px 2px #ff6060, inset 1px 1px 1px 2px #ff6060, inset -1px -1px 1px 2px #ff6060;
+}
+
+.failure h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff6060;
+}
+
+.failure h4 .term {
+    font-size: 22px;
+    font-weight: 900;
+    color: #ff6060;
+}
+
+.warning {
+    background-color: #ffecc0;
+    border: 1px solid #e9b148;
+    box-shadow: inset 1px 1px 1px 2px #e9b148, inset -1px -1px 1px 2px #e9b148, inset 1px 1px 1px 2px #e9b148, inset -1px -1px 1px 2px #e9b148;
+}
+
+.warning h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #e9b148;
+}
+
+.warning h4 .term {
+    font-size: 22px;
+    font-weight: 900;
+    color: #e9b148;
+}

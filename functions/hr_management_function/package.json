@@ -1,0 +1,27 @@
+{
+    "name": "hr_management_function",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "kumarbunny3110@gmail.com",
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-formidable": "^1.2.0",
+        "formidable": "^1.2.2",
+        "require": "^2.4.20",
+        "zcatalyst-sdk-node": "latest"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.5",
+        "css-loader": "^4.3.0",
+        "style-loader": "^1.3.0",
+        "webpack": "^4.44.2",
+        "webpack-cli": "^3.3.12"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js",
+        "dev": "webpack ../../client/src/js/main.js --mode development",
+        "build": "webpack --mode production"
+    }
+}

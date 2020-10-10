@@ -1,0 +1,256 @@
+#candidateArea {
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    grid-column-gap: 20px;
+}
+
+.role {
+    width: 450px;
+    color: whitesmoke;
+    font-size: 20px;
+    justify-self: end;
+    padding-top: 30px;
+}
+
+.role #role-head {
+    font-weight: 600;
+    font-size: 25px;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.line {
+    border: thin solid #a2dfdf;
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#role-para {
+    text-align: center;
+    line-height: 30px;
+}
+
+#role-para em {
+    color: #a2dfdf;
+}
+
+@media screen and (max-width: 500px) {
+    #candidateArea {
+        padding: 20px 0px;
+    }
+}
+
+.form-wrapper {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 0.5px solid #d8d4d4;
+    box-shadow: inset 1px 1px 0.5px 0.5px #a8a7a7, inset -1px -1px 0.5px 0.5px #a8a7a7;
+    color: #032f3e;
+    background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 430px) {
+    .form-wrapper {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .form-wrapper {
+        width: 300px;
+    }
+}
+
+.input-container {
+    width: 360px;
+    position: relative;
+    height: 50px;
+    margin: 20px 0px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 430px) {
+    .input-container {
+        width: 310px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .input-container {
+        width: 260px;
+    }
+}
+
+.input-container .input {
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    color: #595f6e;
+    border: none;
+    font-size: 18px;
+    outline: none;
+    background-color: #f3ecec;
+}
+
+.form-wrapper .label-content2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #032f3e;
+}
+
+.form-wrapper .label-content2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #acdfdf;
+    left: 0px;
+    bottom: -1px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.content-name {
+    position: absolute;
+    left: 0px;
+    bottom: 5px;
+    transition: all 0.1s ease;
+}
+
+.input-container .input:focus+label .content-name,
+.input-container .input:valid+label .content-name {
+    transform: translateY(-150%);
+}
+
+.input-container .input:focus+label::after,
+.input-container .input:valid+label::after {
+    transform: translateX(0%);
+}
+
+.resumeButton button {
+    border: none;
+    text-decoration: none;
+    background-color: #acdfdf;
+    text-align: center;
+    width: 100%;
+    color: #032f3e;
+    padding: 15px 0px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 1px 1px 0.5px 1px #acdfdf, 1px 1px 0.5px 1px #acdfdf;
+    outline: none;
+    transition: all 0.1s ease;
+    margin-top: 20px;
+}
+
+.resumeButton button:hover {
+    background-color: #05c7c7;
+}
+
+.resumeButton button:disabled {
+    background-color: #c7e6e4;
+    box-shadow: 1px 1px 0.5px 1px #c7e6e4, 1px 1px 0.5px 1px #c7e6e4;
+    cursor: default;
+}
+
+.applyButton button {
+    border: none;
+    text-decoration: none;
+    background-color: #acdfdf;
+    text-align: center;
+    width: 50%;
+    color: #032f3e;
+    padding: 10px 0px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 1px 1px 0.5px 1px #acdfdf, 1px 1px 0.5px 1px #acdfdf;
+    outline: none;
+    transition: all 0.1s ease;
+    margin-top: 20px;
+}
+
+.applyButton button:hover {
+    background-color: #05c7c7;
+}
+
+.applyButton button:disabled {
+    background-color: #c7e6e4;
+    box-shadow: 1px 1px 0.5px 1px #c7e6e4, 1px 1px 0.5px 1px #c7e6e4;
+    cursor: default;
+}
+
+.replace {
+    text-align: start;
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+.replace h5 {
+    margin-top: 5px;
+    color: #00b8b8;
+    cursor: pointer;
+}
+
+.replace h5:hover {
+    color: #4ddbdb;
+    transition: all 0.4s ease-in;
+}
+
+.login-footer2 {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #575758;
+    margin: 20px 0px 0px 0px;
+}
+
+
+/* The message box is shown when the user clicks on the password field */
+
+#messages {
+    display: none;
+    background: #f1f1f1;
+    color: #595f6e;
+    position: relative;
+    padding: 20px 20px 0px 20px;
+    margin-top: 10px;
+}
+
+#messages p {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.error-content {
+    color: #ff5f5f;
+    font-size: 15px;
+    display: none;
+}
+
+.correct-content {
+    color: #1d861d;
+    font-size: 15px;
+    display: none;
+}
+
+.valid {
+    color: #1d861d;
+}
+
+.invalid {
+    color: #ff5f5f;
+}

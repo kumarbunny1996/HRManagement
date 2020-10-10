@@ -1,0 +1,38 @@
+header {
+    display: flex;
+    color: white;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+header #head1 {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    cursor: pointer;
+}
+
+header h1 a {
+    padding: 20px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+#head2 {
+    margin-top: 20px;
+}
+
+#head1:hover {
+    color: #acdfdf;
+    transition: all 0.3s ease-in-out;
+}
+
+header h1 a:hover {
+    color: #acdfdf;
+    transition: all 0.3s ease-in-out;
+}
+
+h1 #logo {
+    font-size: 22px;
+    color: #acdfdf;
+}

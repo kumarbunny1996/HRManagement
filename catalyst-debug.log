@@ -1,0 +1,13 @@
+[debug] [2020-10-10T14:58:13.716Z] : 
+[debug] [2020-10-10T14:58:13.732Z] : ----------------------------------------------------------------------
+[debug] [2020-10-10T14:58:13.732Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\ELCOT\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2020-10-10T14:58:13.732Z] : CLI Version:  1.0.4
+[debug] [2020-10-10T14:58:13.732Z] : Platform:     win32
+[debug] [2020-10-10T14:58:13.732Z] : Node Version: v12.16.1
+[debug] [2020-10-10T14:58:13.732Z] : Time:         Sat Oct 10 2020 07:58:13 GMT-0700 (Pacific Daylight Time)
+[debug] [2020-10-10T14:58:13.732Z] : ----------------------------------------------------------------------
+[debug] [2020-10-10T14:58:13.732Z] : 
+[debug] [2020-10-10T14:58:22.428Z] : > authorizing via signed-in user option
+[debug] [2020-10-10T14:58:22.428Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL"]
+[debug] [2020-10-10T14:58:22.490Z] : >>>> HTTP REQUEST : GET https://catalyst.zoho.com/baas/v1/project/1835000000004285 
+

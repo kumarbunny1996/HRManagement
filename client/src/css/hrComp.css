@@ -1,0 +1,210 @@
+.hr-comp {
+    width: 100%;
+}
+
+.hr-header {
+    display: flex;
+    color: white;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.hr-header #head2 {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    cursor: pointer;
+}
+
+.hr-header #admin-head {
+    padding-top: 20px;
+    color: whitesmoke;
+    padding-bottom: 40px;
+    cursor: pointer;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#head2:hover {
+    color: #acdfdf;
+    transition: all 0.3s ease-in-out;
+}
+
+.hr-header #admin-head:hover {
+    color: #acdfdf;
+    transition: all 0.3s ease-in-out;
+}
+
+#logo2 {
+    font-size: 25px;
+    color: #acdfdf;
+}
+
+#icon-head {
+    color: whitesmoke;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.sub-head {
+    text-align: start;
+    padding: 20px;
+    color: whitesmoke;
+}
+
+.sub-content {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    padding: 20px;
+    border-bottom: thin solid #acdfdf;
+    margin-bottom: 20px;
+}
+
+#table-head {
+    justify-self: center;
+    color: #acdfdf;
+    cursor: pointer;
+}
+
+#table-head:hover {
+    color: #acdfdf;
+    transition: all 0.4s ease-in;
+}
+
+#table-head2 {
+    justify-self: center;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+#table-head2:hover {
+    color: #acdfdf;
+    transition: all 0.4s ease-in;
+}
+
+.list-parent {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 10% 25% 60%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    border: thin solid black;
+    background-color: whitesmoke;
+}
+
+.user-icon {
+    height: 60px;
+    width: 60px;
+    justify-self: center;
+    border-radius: 50%;
+    border: thin solid gray;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.user-icon i {
+    color: gray;
+    font-size: 30px;
+}
+
+.user-details h5 {
+    color: gray;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.user-details h6 {
+    color: gray;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.user-block {
+    display: flex;
+    justify-content: space-around;
+}
+
+.download {
+    border: none;
+    text-decoration: none;
+    background-color: #acdfdf;
+    text-align: center;
+    height: 50px;
+    width: 20%;
+    color: #032f3e;
+    padding: 10px 0px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 1px 1px 0.5px 1px #acdfdf, 1px 1px 0.5px 1px #acdfdf;
+    outline: none;
+    transition: all 0.1s ease;
+}
+
+.download:hover {
+    background-color: #05c7c7;
+}
+
+.approve {
+    border: none;
+    text-decoration: none;
+    background-color: #acdfdf;
+    text-align: center;
+    width: 20%;
+    height: 50px;
+    color: #032f3e;
+    padding: 10px 0px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 1px 1px 0.5px 1px #acdfdf, 1px 1px 0.5px 1px #acdfdf;
+    outline: none;
+    transition: all 0.1s ease;
+}
+
+.approve:hover {
+    background-color: #05c7c7;
+}
+
+.close {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: thin solid rgb(245, 130, 130);
+    background-color: whitesmoke;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.close i {
+    font-size: 30px;
+    color: rgb(255, 125, 125);
+}
+
+.close:hover {
+    background-color: rgb(255, 125, 125);
+    transition: all 0.2s ease-in;
+}
+
+.close i:hover {
+    color: whitesmoke;
+    transition: all 0.2s ease-in;
+}
+
+.downloaded {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.approved {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 20px;
+}
