@@ -13,14 +13,21 @@ const app = express();
 //app.use(express.json());
 
 app.use(formidable({}, [{
-    event: 'fileBegin',
-    action: function(req, res, next, name, file) {
-        let path = file.path;
-        name = file.name
-        file.path = path.split('upload')[0] + name;
+        event: 'fileBegin',
+        action: function(req, res, next, name, file) {
+            let path = file.path;
+            name = file.name
+            file.path = path.split('upload')[0] + name;
 
+        }
+    },
+    {
+        event: 'error',
+        action: function(req) {
+            req.resume();
+        }
     }
-}]));
+]));
 
 app.post('/admin', (req, res) => {
     handleAdminLogin(req, res);

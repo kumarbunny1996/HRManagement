@@ -20,7 +20,10 @@ if (location.hash === "#jobs") {
 }
 
 if (location.hash === "#hr_management") {
-    hrComponent();
-    getCandidateList();
-    hrLogicEvents();
+    let token = localStorage.getItem('token');
+    if (token) {
+        hrComponent();
+        getCandidateList();
+        hrLogicEvents();
+    }
 }

@@ -1,3 +1,5 @@
+const userStore = require("./userStore");
+
 let events = (element, event, eventHandler) => document.querySelector(element).addEventListener(event, eventHandler);
 
 let removeEvents = (element, event, eventHandler) => document.querySelector(element).removeEventListener(event, eventHandler);
@@ -143,6 +145,11 @@ const showMsg = (object = {}, timer = 3000) => {
 
 }
 
+const logOut = () => {
+    localStorage.clear();
+    userStore.itemStorage.clear();
+}
+
 
 
 module.exports = {
@@ -158,4 +165,5 @@ module.exports = {
     showModel,
     showMsg,
     closeModel,
+    logOut
 }

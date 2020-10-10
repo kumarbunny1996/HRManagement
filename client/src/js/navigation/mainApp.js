@@ -32,6 +32,8 @@ const navigate = () => {
     }
 
     if (fragmentID === "hr_management") {
+        let token = localStorage.getItem('token');
+        if (!token) return;
         hrComponent();
         /*if (userStore.itemStorage.getItem("list") === null || userStore.itemStorage.getItem('list') === undefined) {
             getCandidateList();

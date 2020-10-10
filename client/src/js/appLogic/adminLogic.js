@@ -89,7 +89,12 @@ const adminLogic = () => {
             .then(resObj => {
                 let isAdmin = resObj.logged_in;
                 if (isAdmin) {
-                    location.hash = "#hr_management";
+                    localStorage.setItem('token', 'admin');
+                    let token = localStorage.getItem('token');
+                    if (token) {
+                        location.hash = "#hr_management";
+                    }
+
                 }
             })
             .catch(err => {
