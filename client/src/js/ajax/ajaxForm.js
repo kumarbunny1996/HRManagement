@@ -14,7 +14,7 @@ module.exports = function requestToServerWithFormData(requestObject = {}) {
         // if (requestObject.method === 'POST' || requestObject.method === 'PUT') {
         //     xhr.setRequestHeader(requestObject.name, requestObject.value);
         // }
-        xhr.setRequestHeader(requestObject.name, requestObject.value);
+        //xhr.setRequestHeader(requestObject.name, requestObject.value);
         xhr.send(requestObject.data);
     });
 };
