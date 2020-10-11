@@ -15,9 +15,11 @@ const afterFileUpload = (value) => {
 const replaceLogicEvent = () => {
     const resumeBtn = document.getElementById("resumeButton");
     const replace = document.getElementById("replace");
+    const file = document.getElementById("real-file");
     replace.addEventListener("click", e => {
         resumeBtn.style.display = "block";
         replace.style.display = "none";
+        file.value = "";
     });
 }
 
