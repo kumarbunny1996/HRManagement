@@ -15,7 +15,6 @@ if (location.hash === "#admin") {
         indexPage();
         loginForm();
         adminLogicEvents();
-        alert('username=admin and password=admin');
     }
 }
 

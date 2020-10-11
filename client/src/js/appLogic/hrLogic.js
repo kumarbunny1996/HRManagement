@@ -51,12 +51,19 @@ const downloadResume = (e, id) => {
 
 const deleteCandidate = (e, id) => {
     let fileId = e.target.dataset.file;
+    let value = e.target.dataset.value;
     let reqObj = {
         method: 'DELETE',
         url: `/server/hr_management_function/deleteCandidate?row_id=${id}&file_id=${fileId}`,
         data: null
     }
-    let parentElement = e.target.parentElement.parentElement.parentElement;
+    let parentElement;
+    if (value === "close") {
+        parentElement = e.target.parentElement.parentElement.parentElement;
+    } else {
+        parentElement = e.target.parentElement.parentElement;
+    }
+
     let listCont = document.getElementById("list-cont");
     let rowId = parentElement.dataset.id;
     console.log("delete " + parentElement, id, e, rowId);
@@ -245,7 +252,7 @@ const listLogicEvents = () => {
         let value = e.target.dataset.value;
         console.log(id, value);
         if (value === "download") return downloadResume(e, id);
-        if (value === "close") return deleteCandidate(e, id);
+        if (value === "close" || value === "delete") return deleteCandidate(e, id);
         if (value === "approve") return approveCandidate(e, id);
     });
 }

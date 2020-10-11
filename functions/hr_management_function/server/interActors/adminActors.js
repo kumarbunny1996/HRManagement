@@ -20,6 +20,8 @@ const handleAdminLogin = async(req, res) => {
                     logged_in: true,
                     message: 'admin is valid',
                 });
+            } else {
+                res.status(200).send({ resObj });
             }
 
         })
@@ -54,14 +56,15 @@ function getDataFromCatalystDataStore(catalystApp, password, username) {
 const checkAdmin = async(catalystApp, password, username) => {
 
     let adminDetails = await getDataFromCatalystDataStore(catalystApp, password, username);
+    if (adminDetails.length === 0) {
+        return {
+            message: 'No Admin Found'
+        };
+    }
     let value = adminDetails[0].AdminDetail.Password;
     let name = adminDetails[0].AdminDetail.Username;
     if (value === password && name === username) {
         return { value, name };
-    } else {
-        return new Promise.reject({
-            message: 'No Admin Found'
-        });
     }
 
 }

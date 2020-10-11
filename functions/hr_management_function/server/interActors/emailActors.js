@@ -14,7 +14,7 @@ const handleEmailRequest = async(req, res) => {
         .catch(err => {
             console.log(err);
             res.status(400).send({ msg: "Email request has been failed", isSend: false });
-        })
+        });
 }
 
 const sendEmailRequest = async(catalystApp, configObj, rowId) => {

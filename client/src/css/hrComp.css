@@ -125,13 +125,39 @@
 }
 
 .user-block {
+    display: flex;
+    justify-content: space-around;
+}
+
+.download {
+    border: none;
+    text-decoration: none;
+    background-color: #acdfdf;
+    text-align: center;
+    height: 50px;
+    width: 20%;
+    color: #032f3e;
+    padding: 10px 0px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 1px 1px 0.5px 1px #acdfdf, 1px 1px 0.5px 1px #acdfdf;
+    outline: none;
+    transition: all 0.1s ease;
+}
+
+.download:hover {
+    background-color: #05c7c7;
+}
+
+.user-block2 {
     display: grid;
     grid-template-columns: 150px 60px;
     justify-content: flex-end;
     grid-column-gap: 40px;
 }
 
-.download {
+.download2 {
     border: none;
     text-decoration: none;
     background-color: #acdfdf;
@@ -148,7 +174,7 @@
     transition: all 0.1s ease;
 }
 
-.download:hover {
+.download2:hover {
     background-color: #05c7c7;
 }
 
@@ -190,13 +216,13 @@
     color: rgb(255, 125, 125);
 }
 
-.close:hover {
-    background-color: rgb(255, 125, 125);
+.close:hover i {
+    color: whitesmoke;
     transition: all 0.2s ease-in;
 }
 
-.close i:hover {
-    color: whitesmoke;
+.close:hover {
+    background-color: rgb(255, 125, 125);
     transition: all 0.2s ease-in;
 }
 

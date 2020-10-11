@@ -1,4 +1,4 @@
-const { events, loaderDiv, removeOverlayLoader, showHide } = require("../utils/utils");
+const { events, loaderDiv, removeOverlayLoader, showHide, showMsg } = require("../utils/utils");
 const makeRequestToServer = require("../ajax/ajax");
 const requestToServerWithFormData = require("../ajax/ajaxForm");
 
@@ -95,10 +95,19 @@ const adminLogic = () => {
                         location.hash = "#hr_management";
                     }
 
+                } else {
+                    let msgObj = {
+                        message: resObj.resObj.message,
+                        code: '&#10008',
+                        term: 'Failure',
+                        value1: 'info-style',
+                        value2: 'failure'
+                    }
+                    showMsg(msgObj);
                 }
             })
             .catch(err => {
-                console.log(err);
+                return err;
             })
             .finally(removeOverlayLoader);
     }

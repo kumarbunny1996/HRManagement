@@ -25,7 +25,6 @@ const navigate = () => {
         indexPage();
         loginForm();
         adminLogicEvents();
-        alert('username=admin and password=admin');
     }
 
     if (fragmentID === "jobs") {
