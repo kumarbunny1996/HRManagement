@@ -23,7 +23,7 @@ const candidateForm = () => {
                 <h2><span class="register-logo"><i></i></span>Apply Jobs</h2> 
                 </div>
                 <div class="input-container">
-                    <input type="text" class="input" id="username" name="username" autocomplete="off" required>
+                    <input type="text" class="input" id="username" name="username" autocomplete="off" required autofocus>
                     <label for="username" class="label-content2"><span class="content-name">Name *</span></label>
                 </div>
                 <div class="error-content" id="error-content">

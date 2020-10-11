@@ -20,7 +20,7 @@ const emailDom = (dataObj = {}) => {
             <div class="input-email-container">
                 <label for="content-email">Content:</label>
 
-                <textarea id="content-email" name="content" rows="8" cols="50">
+                <textarea id="content-email" name="content" rows="8" cols="50" autofocus>
 Dear ${dataObj.Name},
     I hope you're doing well. Thank you for applying to @JustWorks Corporation for the Software Development position. We would like to invite you for an online test.
     Looking forward to your confirmation.
