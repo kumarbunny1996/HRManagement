@@ -30,9 +30,10 @@ const getDataList = async(catalystApp) => {
     let status = "approved";
     let list = await getDataFromCatalystDataStore(catalystApp, status);
     if (list.length === 0) {
-        return new Promise.reject({
-            message: "No approved list"
-        });
+        return {
+            message: "No approved list",
+            isThere: true,
+        }
     } else {
         return {
             list

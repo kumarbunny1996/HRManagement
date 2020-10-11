@@ -12,22 +12,26 @@ var { handleApprovedList } = require("./server/interActors/approvedList");
 const app = express();
 //app.use(express.json());
 
-app.use(formidable({}, [{
-        event: 'fileBegin',
-        action: function(req, res, next, name, file) {
-            let path = file.path;
-            name = file.name
-            file.path = path.split('upload')[0] + name;
+let formidableFunction = formidable({}, [{
+    event: 'fileBegin',
+    action: function(req, res, next, name, file) {
+        let path = file.path;
+        name = file.name
+        file.path = path.split('upload')[0] + name;
 
-        }
-    },
-    {
-        event: 'error',
-        action: function(req, res, next) {
-            next();
-        }
-    },
-]));
+    }
+}, ]);
+const readFormidable = (req, res, next) => {
+    if (req.method == 'POST') {
+        return formidableFunction(req, res, next);
+    }
+    next();
+
+}
+app.use(readFormidable);
+
+
+
 
 app.post('/admin', (req, res) => {
     handleAdminLogin(req, res);

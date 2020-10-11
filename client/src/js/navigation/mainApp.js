@@ -6,6 +6,7 @@ const adminLogicEvents = require("../appLogic/adminLogic");
 const { hrComponent, allListComponent } = require("../Components/hrComp");
 const { hrLogicEvents, getCandidateList, listLogicEvents } = require("../appLogic/hrLogic");
 const userStore = require("../utils/userStore");
+const { toolTipBox, events, logOut } = require("../utils/utils");
 
 //sets the home page as default
 const setDefaultPage = () => {
@@ -19,9 +20,12 @@ const navigate = () => {
     const fragmentID = location.hash.substr(1);
 
     if (fragmentID === "admin") {
+        let token = localStorage.getItem('token');
+        if (token) return location.hash = "#hr_management";
         indexPage();
         loginForm();
         adminLogicEvents();
+        alert('username=admin and password=admin');
     }
 
     if (fragmentID === "jobs") {
@@ -33,19 +37,10 @@ const navigate = () => {
 
     if (fragmentID === "hr_management") {
         let token = localStorage.getItem('token');
-        if (!token) return;
+        if (!token) return location.hash = "#admin";
         hrComponent();
-        /*if (userStore.itemStorage.getItem("list") === null || userStore.itemStorage.getItem('list') === undefined) {
-            getCandidateList();
-        } else {
-            let listArr = userStore.itemStorage.getItem('list');
-            let list = listArr['list'];
-            let filterArr = list.filter(item => {
-                return item.Status === 'unapproved';
-            });
-            allListComponent(filterArr);
-            listLogicEvents();
-        }*/
+        toolTipBox();
+        events("#log-out", 'click', logOut);
         getCandidateList();
         hrLogicEvents();
     }

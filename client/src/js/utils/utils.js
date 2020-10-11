@@ -144,8 +144,25 @@ const showMsg = (object = {}, timer = 3000) => {
     }, timer);
 
 }
+const toolTipBox = () => {
+    const account = document.getElementById('admin-head');
+    const toolTip = document.createElement('div');
+    toolTip.className = "tool-tip-content";
+    toolTip.id = "tool-tip-content";
+    toolTip.innerHTML = `
+        <ul class="tool-tip-list">
+            <li id="log-out">Log out</li>
+        </ul>
+        
+    `;
+    if (document.getElementById('tool-tip-content')) {
+        account.removeChild(document.getElementById('tool-tip-content'));
+    }
+    account.appendChild(toolTip);
+}
 
 const logOut = () => {
+    location.hash = "#admin";
     localStorage.clear();
     userStore.itemStorage.clear();
 }
@@ -165,5 +182,6 @@ module.exports = {
     showModel,
     showMsg,
     closeModel,
-    logOut
+    logOut,
+    toolTipBox
 }

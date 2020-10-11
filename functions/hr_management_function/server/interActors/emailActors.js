@@ -21,7 +21,7 @@ const sendEmailRequest = async(catalystApp, configObj, rowId) => {
     //Create a config object with the email configuration
     let config = {
         from_email: 'just.hr12@gmail.com',
-        to_email: configObj.email,
+        to_email: configObj.to,
         subject: configObj.subject,
         content: configObj.content
     };
@@ -43,7 +43,7 @@ const sendEmailRequest = async(catalystApp, configObj, rowId) => {
 
         return {
             isSend: true,
-            msg: 'Your mail has bee sent successfully'
+            msg: 'Your mail has been sent successfully'
         }
     }
 

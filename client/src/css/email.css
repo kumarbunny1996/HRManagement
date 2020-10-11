@@ -38,6 +38,7 @@ textarea {
     font-size: 16px;
     color: rgb(83, 73, 73);
     overflow: visible;
+    resize: none;
 }
 
 .send {

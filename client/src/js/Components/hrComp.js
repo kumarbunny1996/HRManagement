@@ -61,10 +61,9 @@ const approvedListComp = (listArr = []) => {
                 <h6>${listArr[i].Email}</h6>
             </div>
             <div class="user-block">
-                <button class="download" id="download" data-value="download" data-id="${listArr[i].FileID}" data-name="${listArr[i].Filename}">Download</button>
+                <button class="download" id="download2" data-value="download" data-id="${listArr[i].FileID}" data-name="${listArr[i].Filename}">Download</button>
                 <p class="downloaded" id="downloaded" style="display:none;">downloaded</p>
-                <p class="approved">Approved</p>
-                <div class="close" id="close">
+                <div class="close" id="close2">
                     <i class="fa fa-times" data-value="close" aria-hidden="true" data-id="${listArr[i].ROWID}" data-file="${listArr[i].FileID}"></i>
                 </div>
             </div>

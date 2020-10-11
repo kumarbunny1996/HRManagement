@@ -35,7 +35,6 @@ const approvedLogic = () => {
             return item.Status === 'approved';
         });
         approvedListComp(filterArr);
-        listLogicEvents();
     }
 }
 
@@ -107,6 +106,17 @@ const getCandidateList = () => {
     loaderDiv();
     requestToServerWithFormData(reqObj)
         .then((resObj) => {
+            if (resObj.isThere) {
+                let msgObj = {
+                    message: resObj.message,
+                    code: '&#10008',
+                    term: 'Failure',
+                    value1: 'info-style',
+                    value2: 'failure'
+                }
+                showMsg(msgObj);
+                return;
+            }
             let list = resObj.list;
             let listArr = []
             for (let i = 0; i < list.length; i++) {
@@ -144,6 +154,17 @@ const getApprovedList = () => {
     loaderDiv();
     requestToServerWithFormData(reqObj)
         .then((resObj) => {
+            if (resObj.isThere) {
+                let msgObj = {
+                    message: resObj.message,
+                    code: '&#10008',
+                    term: 'Failure',
+                    value1: 'info-style',
+                    value2: 'failure'
+                }
+                showMsg(msgObj);
+                return;
+            }
             let list = resObj.list;
             let listArr = []
             for (let i = 0; i < list.length; i++) {
@@ -162,7 +183,8 @@ const getApprovedList = () => {
                 return item.Status === 'approved';
             });
             approvedListComp(filterArr);
-            listLogicEvents();
+
+            //approvedListLogicEvents();
         })
         .catch(err => {
             console.log(err);
@@ -199,6 +221,7 @@ const approveCandidate = (e, id) => {
                 let dataObj = resObj.singleObj[0].CandidateDetails;
                 let value = emailDom(dataObj);
                 showModel(value);
+                document.getElementById('content-email').focus();
                 if (rowId == id) {
                     emailLogicEvent(parentElement);
                 }
@@ -226,6 +249,8 @@ const listLogicEvents = () => {
         if (value === "approve") return approveCandidate(e, id);
     });
 }
+
+
 
 module.exports = {
     hrLogicEvents,
