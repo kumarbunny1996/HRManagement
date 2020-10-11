@@ -11,7 +11,7 @@ const loginForm = () => {
                     <h1>Admin Account</h1> 
                 </div>
                 <div class="form-content">
-                    <input type="text" class="user-input" id="user-input" name="username" autocomplete="off" required>
+                    <input type="text" class="user-input" id="user-input" name="username" autocomplete="off" required autofocus>
                     <label for="user-input" class="label-content"><span class="content2">Username *</span></label>
                 </div>
                 <div class="errorMsg" id="errorMsg"style="display:none">
