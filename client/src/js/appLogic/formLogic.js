@@ -43,7 +43,7 @@ const fileUpload = () => {
     });
     fileInput.addEventListener("change", e => {
         let filePath = e.target.value;
-        console.log(filePath);
+        // console.log(filePath);
         checksTheFile(fileInput, filePath);
     });
 }
@@ -215,7 +215,7 @@ const saveCandidateData = () => {
             })
             .catch(errObj => {
                 let value = errObj.message.split('message :')[1];
-                console.log(value);
+                // console.log(value);
                 let msgObj = {
                     message: value,
                     code: '&#9888',

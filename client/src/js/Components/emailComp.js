@@ -67,7 +67,7 @@ const createFormData = (data) => {
 
 
 const emailRequest = (e, element) => {
-    console.log(element);
+    // console.log(element);
     let cont = document.getElementById('list-cont');
     let id = e.target.dataset.id;
     if (id === undefined) return;
@@ -83,7 +83,7 @@ const emailRequest = (e, element) => {
     loaderDiv();
     requestToServerWithFormData(reqObj)
         .then(resObj => {
-            console.log(resObj);
+            // console.log(resObj);
             if (resObj.isSend) {
                 let msgObj = {
                     message: resObj.msg,

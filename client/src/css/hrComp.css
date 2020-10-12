@@ -89,7 +89,7 @@
     margin: 0 auto;
     padding: 20px;
     display: grid;
-    grid-template-columns: 10% 25% 60%;
+    grid-template-columns: 10% 45% 450px;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
     border: thin solid black;
@@ -126,7 +126,7 @@
 
 .user-block {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .download {
@@ -135,7 +135,7 @@
     background-color: #acdfdf;
     text-align: center;
     height: 50px;
-    width: 20%;
+    width: 100px;
     color: #032f3e;
     padding: 10px 0px;
     font-size: 16px;
@@ -152,7 +152,7 @@
 
 .user-block2 {
     display: grid;
-    grid-template-columns: 150px 60px;
+    grid-template-columns: 150px 120px;
     justify-content: flex-end;
     grid-column-gap: 40px;
 }
@@ -183,7 +183,7 @@
     text-decoration: none;
     background-color: #acdfdf;
     text-align: center;
-    width: 20%;
+    width: 100px;
     height: 50px;
     color: #032f3e;
     padding: 10px 0px;
@@ -193,6 +193,7 @@
     box-shadow: 1px 1px 0.5px 1px #acdfdf, 1px 1px 0.5px 1px #acdfdf;
     outline: none;
     transition: all 0.1s ease;
+    margin-left: 40px;
 }
 
 .approve:hover {
@@ -208,7 +209,7 @@
     padding: 10px;
     text-align: center;
     cursor: pointer;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 .close i {

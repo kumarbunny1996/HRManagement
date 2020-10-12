@@ -45,7 +45,7 @@ const downloadResume = (e, id) => {
     link.href = `/server/hr_management_function/file?file_id=${fileId}`;
     link.download = filename;
     link.click();
-    console.log(link);
+    // console.log(link);
     return;
 }
 
@@ -66,12 +66,12 @@ const deleteCandidate = (e, id) => {
 
     let listCont = document.getElementById("list-cont");
     let rowId = parentElement.dataset.id;
-    console.log("delete " + parentElement, id, e, rowId);
+    // console.log("delete " + parentElement, id, e, rowId);
     if (id != rowId) return;
     loaderDiv();
     requestToServerWithFormData(reqObj)
         .then(resObj => {
-            console.log(resObj);
+            // console.log(resObj);
             if (resObj.isDeleted) {
                 let msgObj = {
                     message: resObj.msg,
@@ -87,7 +87,7 @@ const deleteCandidate = (e, id) => {
                     let list2 = listArr2['list'];
                     let index = list2.findIndex(obj => obj.ROWID == id);
                     list2.splice(index, 1);
-                    console.log(list2);
+                    // console.log(list2);
                 }
             }
         })
@@ -147,7 +147,7 @@ const getCandidateList = () => {
 
         })
         .catch(err => {
-            console.log(err);
+            // console.log(err);
         })
         .finally(removeOverlayLoader);
 }
@@ -194,7 +194,7 @@ const getApprovedList = () => {
             //approvedListLogicEvents();
         })
         .catch(err => {
-            console.log(err);
+            // console.log(err);
         })
         .finally(() => removeOverlayLoader());
 }
@@ -224,7 +224,7 @@ const approveCandidate = (e, id) => {
         loaderDiv();
         requestToServerWithFormData(reqObj)
             .then(resObj => {
-                console.log(resObj);
+                // console.log(resObj);
                 let dataObj = resObj.singleObj[0].CandidateDetails;
                 let value = emailDom(dataObj);
                 showModel(value);
@@ -234,7 +234,7 @@ const approveCandidate = (e, id) => {
                 }
             })
             .catch(err => {
-                console.log(err);
+                // console.log(err);
             })
             .finally(removeOverlayLoader);
     }
@@ -250,7 +250,7 @@ const listLogicEvents = () => {
         let id = e.target.dataset.id;
         if (id === undefined) return;
         let value = e.target.dataset.value;
-        console.log(id, value);
+        // console.log(id, value);
         if (value === "download") return downloadResume(e, id);
         if (value === "close" || value === "delete") return deleteCandidate(e, id);
         if (value === "approve") return approveCandidate(e, id);
